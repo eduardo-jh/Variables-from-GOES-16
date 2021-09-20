@@ -1,5 +1,5 @@
-#Plotting-variables-from-GOES16
-Variables from GOES16 file
+# Variables-from-GOES-16
+Snapshots from different variables from GOES-16
 
 In this file I describe the process I followed to create plots of different variables from
 the GOES16 in the Northern hemisphere. The files are in NetCDF file.
@@ -17,9 +17,9 @@ The selected date was DOY 181 from 2021, for the Northern hemisphere.
 The Python code to create the snapshots from the GOES 16 file is presented next.
 As usual, the file type is NetCDF which can be opened using the netCDF4 library.
 A list of functions with the names of the variables to be plotted is created, the
-names of these variables should match with the existing variable names in the GOEs 16 file.
+names of these variables should match with the existing variable names in the GOES-16 file.
 There is a function that creates a plot for a single variable at a time. This function
-is used each time in a for loop, in every iteration a plot is created and saved.
+is used each time in a `for loop`, in every iteration a plot is created and saved.
 
 ```Python
 # -*- coding: utf-8 -*-
@@ -97,10 +97,6 @@ Created on Wed Sep 15 11:37:55 2021
 from osgeo import gdal
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
-
-THRESHOLD = 200 # Remove data below this value
-MAX = 310
-MIN = 200
 
 # Open the netCDF4 file
 dr = 'D:/Downloads/ATMO555/Assignment_E3/'
